@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>EDUNEST · General English 3</title><meta name="description" content="EDUNEST General English Level 3: DOLPHINS va PENGUINS guruhlari uchun mashqlar, topshiriqlar va reyting. Ustoz: A'zamjon Toxirov (C1)."><meta property="og:title" content="EDUNEST · General English Level 3"><meta property="og:description" content="DOLPHINS va PENGUINS guruhlari uchun o‘quv makoni."><meta property="og:type" content="website">
 <link rel="icon" id="fav">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet"></noscript><link rel="prefetch" href="mashq.html">
 <style>
 :root{
   --red:#E3101F;--red-d:#B30C18;--red-l:#FDECEE;--navy:#141B2D;--navy-2:#222B42;--ink:#1B2233;--mute:#6B7280;
@@ -1256,6 +1254,313 @@ body.dark .rs-new{background:#11301E;color:#8be0b2}
 @media(prefers-reduced-motion:reduce){.sth,.sth-go,.lvbar b,.st .tgrid .tcard,.bx-an{animation:none}}
 .sth-lvb{white-space:nowrap;flex:none;display:inline-block}
 
+/* ===== v23 landing: clean hero (no floating cards), richer sections ===== */
+.hx-wrap{position:relative;overflow:hidden;background:
+  radial-gradient(55% 70% at 88% 18%,rgba(227,16,31,.10),transparent 62%),
+  radial-gradient(45% 60% at 4% 96%,rgba(108,77,246,.07),transparent 60%),#fff}
+.hx-wrap:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background-image:linear-gradient(rgba(20,27,45,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(20,27,45,.045) 1px,transparent 1px);background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(70% 80% at 30% 40%,#000,transparent 75%);mask-image:radial-gradient(70% 80% at 30% 40%,#000,transparent 75%)}
+.hx{position:relative;padding-top:clamp(28px,5vw,64px);padding-bottom:clamp(40px,6vw,80px)}
+.hx-h1{position:relative;z-index:0;font-size:clamp(40px,5.8vw,76px)}
+.hx-h1 em{white-space:normal}
+.hx-pill{background:rgba(255,255,255,.85)}
+.hx-vis{min-height:540px}
+.hx-photo{inset:0 0 0 8%;border-radius:32px;background:linear-gradient(165deg,#F7F8FB 0%,#E9EDF4 70%,#DFE5EE 100%);box-shadow:0 40px 80px -40px rgba(20,27,45,.35),inset 0 0 0 1px rgba(20,27,45,.05)}
+.hx-photo:before{display:none}   /* the old red glow tinted the white shirt pink through the multiply blend */
+.hx-photo:after{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--red),#7a0a14)}
+.hx-photo img{height:94%}
+.hx-plate{left:0;right:auto;bottom:6%;border-radius:0 14px 14px 0;padding:14px 20px 14px 16px;box-shadow:0 18px 40px -12px rgba(20,27,45,.28)}
+.hx-res,.hx-sp{display:none!important}
+.lp-btn{box-shadow:0 10px 24px -12px rgba(227,16,31,.7)}.lp-btn-line,.lp-btn-sm{box-shadow:inset 0 0 0 2px var(--ink)}.lp-btn-sm{box-shadow:none}
+.lp-btn:hover{transform:translateY(-1px)}
+.hx-band{position:relative;padding:34px 0;background:linear-gradient(120deg,#141B2D 0%,#1B2440 60%,#2A1426 100%)}
+.hx-band .lp-in>div{padding-left:18px;border-left:2px solid rgba(255,255,255,.12)}
+.hx-band b{font-size:clamp(32px,3.4vw,44px);line-height:1.05;font-variant-numeric:tabular-nums}
+.hx-band .ml b{background:linear-gradient(90deg,#fff,#FFC2C6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hx-band span{display:block;margin-top:4px;line-height:1.4}
+.sk{display:flex;flex-direction:column;padding:26px 24px}
+.sk-ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--c,#141B2D);box-shadow:0 12px 24px -12px var(--c,#141B2D)}
+.sk-ic svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.sk-l{--c:#7B3FE4}.sk-r{--c:#178A8E}.sk-w{--c:#1E9A56}.sk-s{--c:#D8336A}
+.sk h3{margin:20px 0 8px}
+.sk p{flex:1}
+.sk-li{list-style:none;padding:14px 0 0;margin:16px 0 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px}
+.sk-li li{font-size:13px;font-weight:600;color:var(--slate);background:var(--mist);padding:5px 10px;border-radius:999px}
+.sk-li b{color:var(--ink);font-weight:800}
+.sk:hover{border-color:transparent;box-shadow:0 22px 50px -18px rgba(20,27,45,.25)}
+.lp-show{gap:18px}
+.lp-sc{transition:transform .2s,box-shadow .2s}.lp-sc:hover{transform:translateY(-4px);box-shadow:0 24px 50px -20px rgba(20,27,45,.3)}
+.lp-steps li:before{background:linear-gradient(135deg,var(--red),#7a0a14);box-shadow:0 10px 20px -8px rgba(227,16,31,.6)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.sk-grid .rv:nth-child(2),.lp-show .rv:nth-child(3n+2),.hx-band .rv:nth-child(2){transition-delay:.07s}
+.sk-grid .rv:nth-child(3),.lp-show .rv:nth-child(3n),.hx-band .rv:nth-child(3){transition-delay:.14s}
+.sk-grid .rv:nth-child(4),.hx-band .rv:nth-child(4){transition-delay:.21s}
+@media (prefers-reduced-motion:no-preference){.hx-vis{animation:lpUp .8s .1s cubic-bezier(.2,.7,.2,1) both}}
+@media (max-width:980px){.sk-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.hx-vis{min-height:460px;max-width:460px}.hx-photo{inset:0 0 0 6%}.lp-show{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.hx-vis{min-height:400px}.hx-photo{inset:0 0 0 10px}.hx-plate{left:0;bottom:5%}.hx-band .lp-in{gap:22px 14px}.hx-band .lp-in>div{padding-left:12px}.lp-show{grid-template-columns:1fr}.sk-grid{grid-template-columns:1fr}}
+
+/* ===== v24 landing: photo fills a true portrait frame (no cut shoulders), no red/pink glows anywhere ===== */
+.hx-wrap{background:linear-gradient(180deg,#fff 0%,#F7F8FB 100%)}
+.hx-vis{min-height:0;display:flex;justify-content:flex-end;align-items:center;animation:none}
+.hx-photo{position:relative;inset:auto;width:min(100%,470px);aspect-ratio:1086/1448;border-radius:28px;overflow:hidden;background:#fff;
+  box-shadow:0 30px 70px -30px rgba(20,27,45,.35),0 0 0 1px rgba(20,27,45,.06)}
+.hx-photo:before,.hx-photo:after{display:none}
+.hx-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transform:none;left:0;bottom:auto;mix-blend-mode:normal}
+.hx-plate{left:0;bottom:7%;border-left-color:var(--red)}
+.hx-h1 em:after{display:none}
+.lp-btn{box-shadow:none}
+.lp-steps li:before{background:var(--ink);box-shadow:none}
+.hx-pill i{box-shadow:none}
+.hx-band{background:#141B2D}
+.hx-band .ml b{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#fff}
+.sk-ai{background:#fff}
+.sk-ic{box-shadow:none}
+@media (max-width:860px){.hx-vis{justify-content:center}.hx-photo{width:min(100%,420px);inset:auto}}
+@media (max-width:520px){.hx-photo{width:100%;inset:auto}.hx-plate{left:-6px;bottom:6%}}
+.lp-btn.lp-btn-line{box-shadow:inset 0 0 0 2px var(--ink)}.lp-c1 .lp-btn.lp-btn-line{box-shadow:inset 0 0 0 2px #fff}
+
+/* ===== v25 landing: stacking skill cards (sticky pile, CSS only; JS only adds a small shrink) ===== */
+.stk{margin-top:40px;display:flex;flex-direction:column;gap:28px}
+.stk-c{--c:#141B2D;position:sticky;top:calc(92px + var(--i)*14px);display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;
+  min-height:440px;padding:clamp(26px,3.6vw,48px);border-radius:28px;background:#fff;border:1px solid var(--line);
+  box-shadow:0 -1px 0 rgba(20,27,45,.02),0 24px 60px -34px rgba(20,27,45,.35);transform-origin:50% 0;transform:scale(calc(1 - var(--k,0)*.05))}
+.sk-x{--c:#B7791F}
+.stk-n{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--slate);font-variant-numeric:tabular-nums}
+.stk-hd{display:flex;align-items:center;gap:14px;margin:14px 0 14px}
+.stk-hd h3{margin:0;font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-.03em;color:var(--ink);display:flex;align-items:center;gap:10px}
+.stk-ai{font-style:normal;font-size:12px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--ink);padding:4px 8px;border-radius:8px}
+.stk-big{margin:0 0 16px;font-size:clamp(17px,1.6vw,19px);line-height:1.45;color:var(--slate)}
+.stk-big b{color:var(--c);font-weight:800;font-size:1.25em}
+.stk-ul{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:9px}
+.stk-ul li{position:relative;padding-left:30px;font-size:15.5px;line-height:1.45;color:var(--ink)}
+.stk-ul li:before{content:"";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:var(--mist)}
+.stk-ul li:after{content:"";position:absolute;left:7px;top:5px;width:5px;height:9px;border:solid var(--c);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.stk-go{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff!important;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s}
+.stk-go:hover{transform:translateX(3px)}.stk-go:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+/* the drawn product window */
+.stk-win{border-radius:18px;overflow:hidden;background:#F5F7FA;border:1px solid var(--line);box-shadow:0 20px 44px -26px rgba(20,27,45,.4)}
+.stk-bar{display:flex;align-items:center;gap:6px;padding:11px 14px;background:#141B2D;color:#C9D0DE;font-size:12.5px;font-weight:600}
+.stk-bar i{width:9px;height:9px;border-radius:50%;background:#4A5368}.stk-bar span{margin-left:8px}
+.stk-ui{min-height:250px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.pv-row{display:flex;justify-content:space-between}
+.pv-pill{align-self:flex-start;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink)}
+.pv-dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pv-audio{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:#fff;border:1px solid var(--line)}
+.pv-play{width:26px;height:26px;border-radius:50%;background:var(--c);flex:none;position:relative}
+.pv-play:after{content:"";position:absolute;left:10px;top:8px;border:5px solid transparent;border-left:8px solid #fff;border-right:0}
+.pv-track{flex:1;height:6px;border-radius:6px;background:var(--line);overflow:hidden}.pv-track span{display:block;height:100%;background:var(--c)}
+.pv-q{display:flex;align-items:center;gap:10px}.pv-q b{font-size:12px;width:24px;height:24px;border-radius:7px;display:grid;place-items:center;background:var(--ink);color:#fff;flex:none}
+.pv-ln{display:block;height:8px;border-radius:6px;background:#CDD3DE}
+.pv-opts{display:flex;gap:8px;padding-left:34px}.pv-opts span{width:34px;height:28px;border-radius:8px;display:grid;place-items:center;font-size:12px;font-weight:700;background:#fff;border:1px solid var(--line);color:var(--slate)}
+.pv-opts span.on{background:var(--c);border-color:var(--c);color:#fff}
+.pv-split{flex-direction:row;gap:16px}.pv-split>*{flex:1;min-width:0}
+.pv-text{display:flex;flex-direction:column;gap:9px;padding:14px;border-radius:12px;background:#fff;border:1px solid var(--line)}
+.pv-text span{display:block;height:7px;border-radius:5px;background:#D9DEE7}
+.pv-text .pv-mark{background:color-mix(in srgb,var(--c) 45%,#fff)}
+.pv-text .pv-err{background:#fff;border-bottom:2px dashed #C2410C;border-radius:0;height:9px;background:#FDE7D8}
+.pv-side{display:flex;flex-direction:column;gap:10px}
+.pv-gap{font-weight:700;color:var(--c);letter-spacing:.05em;padding-left:34px;font-size:13px}
+.pv-note{display:flex;flex-direction:column;gap:7px;padding:12px;border-radius:12px;background:#fff;border-left:3px solid var(--c)}.pv-note b{font-size:11.5px;color:var(--c)}
+.pv-fix{align-self:flex-start;font-size:12.5px;font-weight:600;color:var(--ink);padding:6px 10px;border-radius:9px;background:#E7F5EC;border:1px solid #BFE3CC}.pv-fix b{color:#1E7A45}
+.pv-crit{display:grid;gap:7px;margin-top:2px}.pv-crit span{height:8px;border-radius:6px;background:var(--line);overflow:hidden}.pv-crit i{display:block;height:100%;background:var(--c)}
+.pv-c{align-items:center;justify-content:center;gap:18px}.pv-c .pv-pill{align-self:center}
+.pv-mic{width:64px;height:64px;border-radius:50%;background:var(--c);position:relative;box-shadow:0 0 0 10px color-mix(in srgb,var(--c) 14%,transparent)}
+.pv-mic:after{content:"";position:absolute;left:25px;top:16px;width:14px;height:24px;border-radius:8px;background:#fff}
+.pv-wave{display:flex;align-items:center;gap:5px;height:44px}.pv-wave i{width:6px;border-radius:4px;background:var(--c);opacity:.75}
+.pv-score{display:flex;align-items:baseline;gap:8px;padding:16px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+.pv-score b{font-size:48px;line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--ink)}.pv-score span{font-weight:700;color:var(--slate)}
+.pv-score em{margin-left:auto;font-style:normal;font-weight:800;font-size:14px;padding:6px 12px;border-radius:10px;background:var(--c);color:#fff}
+.pv-ok{display:grid;grid-template-columns:repeat(8,1fr);gap:6px}.pv-ok span{height:30px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:800;background:#E7F5EC;color:#1E7A45}
+.pv-ok span.x{background:#FDE7D8;color:#C2410C}
+.pv-cert{align-self:flex-start;font-size:13px;font-weight:700;padding:9px 14px;border-radius:10px;background:var(--ink);color:#fff}
+@media (max-width:860px){.stk-c{grid-template-columns:1fr;min-height:0;gap:22px;top:calc(76px + var(--i)*10px)}.stk-ui{min-height:0}}
+@media (max-width:520px){.stk{gap:20px}.stk-c{padding:22px 18px;border-radius:22px}.stk-ul li{font-size:15px}.stk-ui{padding:14px;gap:10px}
+  .pv-split{flex-direction:column}.pv-text{gap:7px;padding:10px}.pv-score b{font-size:38px}.stk-go{width:100%;justify-content:center}}
+/* phones with short screens (or tall cards): plain list, no pile, so nothing gets hidden */
+@media (max-height:700px),(max-width:860px) and (max-height:760px){.stk-c{position:relative;top:auto;transform:none}}
+@media (prefers-reduced-motion:reduce){.stk-c{transform:none}}
+.stk-c.sk-l{--c:#7B3FE4}.stk-c.sk-r{--c:#178A8E}.stk-c.sk-w{--c:#1E9A56}.stk-c.sk-s{--c:#D8336A}.stk-c.sk-x{--c:#B7791F}
+@media (max-width:860px) and (max-height:880px){.stk-c{position:relative;top:auto;transform:none}}
+/* v26: real screenshots inside the card windows; the drawn preview shows only if an image is missing */
+.stk-img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 0;background:#EEF1F6}
+.stk-win .stk-ui{display:none}.stk-win.nf .stk-ui{display:flex}.stk-win.nf .stk-img{display:none}
+.stk-c{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(22px,3vw,44px)}@media (max-width:860px){.stk-c{grid-template-columns:1fr}}
+
+/* ===== v27 landing: results wall (real student scores; data in platform/results.json, checked at build) ===== */
+.nt-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.nt-head .lp-sub{max-width:34em}
+.nt-tabs{display:inline-flex;gap:4px;padding:5px;border-radius:14px;background:var(--mist);border:1px solid var(--line)}
+.nt-tab{min-height:44px;padding:0 18px;border:0;border-radius:10px;background:transparent;font:inherit;font-weight:700;font-size:15px;color:var(--slate);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:background .15s,color .15s}
+.nt-tab span{min-width:22px;height:22px;padding:0 6px;border-radius:999px;display:grid;place-items:center;font-size:12px;font-weight:800;background:#fff;color:var(--ink)}
+.nt-tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.nt-tab[aria-selected="true"] span{background:rgba(255,255,255,.16);color:#fff}
+.nt-tab:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.nt-panel[hidden]{display:none}
+.nt-facts{margin:30px 0 16px;font-size:15.5px;line-height:1.5;color:var(--slate)}.nt-facts b{color:var(--ink);font-weight:800}
+.nt-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.nt-grid:focus-visible{outline:3px solid var(--ink);outline-offset:4px;border-radius:24px}
+.nt-c{position:relative;display:flex;flex-direction:column;gap:16px;min-width:0;padding:22px 20px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 34px -26px rgba(20,27,45,.35)}
+.nt-top{display:flex;align-items:center;gap:12px;min-width:0}
+.nt-av,.nt-ph{flex:none;width:46px;height:46px;border-radius:50%}
+.nt-av{display:grid;place-items:center;font-weight:800;font-size:15px;color:var(--ink);background:var(--mist)}
+.nt-ph{object-fit:cover;object-position:50% 18%;background:#fff}
+.nt-who{min-width:0}.nt-who b{display:block;font-size:17px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.nt-who small{display:block;margin-top:2px;font-size:13px;line-height:1.35;color:var(--slate)}
+.nt-ov{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;padding:12px 14px;border-radius:14px;background:var(--mist)}
+.nt-ov b{font-size:40px;line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}
+.nt-lv{padding:5px 10px;border-radius:9px;font-size:14px;font-weight:800;background:var(--ink);color:#fff}
+.nt-ov small{flex-basis:100%;font-size:12.5px;font-weight:600;color:var(--slate)}
+.nt-sk{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.nt-sk li{display:grid;grid-template-columns:74px minmax(0,1fr) 34px;align-items:center;gap:10px;font-size:13.5px;font-weight:600;color:var(--slate)}
+.nt-sk i{height:8px;border-radius:8px;background:var(--line);overflow:hidden}
+.nt-sk i:before{content:"";display:block;height:100%;border-radius:8px;background:var(--c);transform-origin:left;transform:scaleX(var(--v));transition:transform 1s cubic-bezier(.2,.7,.2,1) .25s}
+.nt-sk b{text-align:right;font-size:15px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.nt-panel.rv:not(.in) .nt-sk i:before{transform:scaleX(0)}
+.nt-note{margin:-4px 0 0;font-size:13px;font-weight:700;color:#F5B700}
+.nt-t{background:#141B2D;border-color:#141B2D;color:#fff}
+.nt-t .nt-who b,.nt-t .nt-ov b,.nt-t .nt-sk b{color:#fff}
+.nt-t .nt-who small,.nt-t .nt-ov small,.nt-t .nt-sk li{color:#B9C1D3}
+.nt-t .nt-ov{background:rgba(255,255,255,.08)}
+.nt-t .nt-lv{background:#fff;color:#141B2D}
+.nt-t .nt-sk i{background:rgba(255,255,255,.14)}
+.nt-cta{justify-content:center;gap:8px;text-decoration:none;background:var(--mist);border:1.5px dashed #B8C0CF;box-shadow:none;color:var(--ink)!important;transition:border-color .15s}
+.nt-cta b{font-size:21px;font-weight:800;line-height:1.2;letter-spacing:-.02em}
+.nt-cta span{font-size:14.5px;color:var(--slate)}
+.nt-cta em{font-style:normal;font-weight:800;font-size:22px}
+.nt-cta:hover{border-color:var(--ink)}.nt-cta:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.nt-foot{margin:22px 0 0;font-size:13.5px;color:var(--slate)}
+.nt-swipe{display:none}
+.hx-proof{display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:7px 16px 7px 7px;border-radius:999px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink)!important;box-shadow:0 8px 20px -14px rgba(20,27,45,.35);transition:border-color .15s}
+.hx-proof:hover{border-color:var(--ink)}.hx-proof:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.hx-av{display:flex;flex:none}
+.hx-av i{width:34px;height:34px;margin-left:-10px;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800;color:#fff;background:#7B3FE4}
+.hx-av i:first-child{margin-left:0}.hx-av i:nth-child(2){background:#178A8E}.hx-av i:nth-child(3){background:#D8336A}
+.hx-proof b{display:block;font-size:15px;font-weight:800;line-height:1.25}.hx-proof small{display:block;font-size:12.5px;color:var(--slate)}
+.hx-proof em{font-style:normal;font-weight:800}
+@media (max-width:980px){.nt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){
+  .nt-head{gap:18px}.nt-tabs{display:flex;width:100%}.nt-tab{flex:1}
+  .nt-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;
+    margin:0 calc(-1 * clamp(20px,5vw,56px));padding:4px clamp(20px,5vw,56px) 16px;scroll-padding:0 clamp(20px,5vw,56px)}
+  .nt-grid::-webkit-scrollbar{display:none}
+  .nt-c{scroll-snap-align:start}
+  .nt-swipe{display:block;margin:4px 0 0;font-size:13px;font-weight:600;color:var(--slate)}
+}
+@media (prefers-reduced-motion:reduce){.nt-sk i:before{transition:none}}
+#ntP2 .nt-who small{min-height:2.7em}.hx-av i{margin-left:-7px;font-size:11.5px}
+
+/* v28: teacher certificates (Multi-Level only): papers on a desk, a magnifier on hover, a full-quality viewer */
+.cf-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-areas:"head stage" "tiles stage";grid-template-rows:auto 1fr;gap:28px clamp(32px,5vw,72px);align-items:start}
+.cf-head{grid-area:head}.cf-tiles{grid-area:tiles;display:grid;gap:14px}
+.cf-stage{grid-area:stage;align-self:center;justify-self:center;position:relative;isolation:isolate;width:100%;max-width:600px;aspect-ratio:1/1.02}
+.cf-mat{position:absolute;inset:2% 0 8%;border-radius:32px;background:radial-gradient(#BCC4D2 1.2px,transparent 1.6px) 0 0/18px 18px;-webkit-mask:radial-gradient(closest-side,#000 50%,transparent);mask:radial-gradient(closest-side,#000 50%,transparent);pointer-events:none}
+.cf-paper{--x:0%;--y:0%;--r:0deg;--lift:0px;--fl:0px;--sc:1;position:absolute;left:50%;top:46%;width:56%;padding:0;border:0;border-radius:6px;background:#fff;cursor:zoom-in;font:inherit;
+  box-shadow:0 1px 2px rgba(20,27,45,.14),0 22px 44px -18px rgba(20,27,45,.45);
+  transform:translate(-50%,-50%) translate(var(--x),calc(var(--y) - var(--lift) - var(--fl))) rotate(var(--r)) scale(var(--sc));transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.cf-paper img{display:block;width:100%;height:auto;border-radius:6px;pointer-events:none;-webkit-user-drag:none}
+.cf-paper[data-doc="0"]{--x:-29%;--y:-2%;--r:-6deg;z-index:1}
+.cf-paper[data-doc="1"]{--x:29%;--y:3%;--r:5deg;z-index:1}
+.cf-stage[data-front="0"] .cf-paper[data-doc="0"],.cf-stage[data-front="1"] .cf-paper[data-doc="1"]{z-index:2;--fl:6px}
+.cf-paper:hover,.cf-paper:focus-visible{--r:0deg;--lift:12px;--sc:1.03;box-shadow:0 1px 2px rgba(20,27,45,.14),0 36px 64px -22px rgba(20,27,45,.55)}
+.cf-paper:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.cf-tab{position:absolute;left:14px;top:-13px;display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;background:var(--ink);color:#fff;font-size:12.5px;font-weight:800;line-height:1.2;white-space:nowrap;box-shadow:0 6px 14px -6px rgba(20,27,45,.6);pointer-events:none}
+.cf-tab i{width:7px;height:7px;border-radius:50%;background:#F5B700}
+.cf-lens{position:absolute;left:0;top:0;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;pointer-events:none;opacity:0;scale:.5;background:#fff no-repeat;
+  box-shadow:0 0 0 3px #fff,0 0 0 4px rgba(20,27,45,.2),0 20px 40px -10px rgba(20,27,45,.6);transition:opacity .18s,scale .18s}
+.cf-paper.lz .cf-lens{opacity:1;scale:1}
+.cf-stamp{position:absolute;left:0;bottom:8%;z-index:3;width:21%;max-width:124px;aspect-ratio:1;border-radius:50%;box-shadow:0 14px 28px -10px rgba(20,27,45,.55);pointer-events:none}
+.cf-stamp svg{display:block;width:100%;height:100%;animation:cfSpin 40s linear infinite}
+.cf-stamp b{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(19px,2.5vw,30px);font-weight:800;letter-spacing:-.02em;color:#F5B700}
+@keyframes cfSpin{to{transform:rotate(1turn)}}
+.cf-hint{position:absolute;left:0;right:0;bottom:0;margin:0;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:600;line-height:1.3;color:var(--slate);text-align:center}
+.cf-hint svg{flex:none;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+.cf-h-touch{display:none}
+@media (hover:none),(pointer:coarse){.cf-h-fine{display:none}.cf-h-touch{display:inline}}
+/* deal-in: both papers start stacked, then fan out; the stamp lands last */
+@keyframes cfDeal{from{transform:translate(-50%,-50%) translate(0,0) rotate(0deg) scale(1)}}
+@keyframes cfStamp{from{opacity:0;transform:scale(1.8) rotate(-24deg)}60%{opacity:1}}
+.cf-stage.rv.in .cf-paper{animation:cfDeal 1s cubic-bezier(.2,.8,.2,1) .2s backwards}
+.cf-stage.rv.in .cf-paper[data-doc="1"]{animation-delay:.35s}
+.cf-stage.rv.in .cf-stamp{animation:cfStamp .6s cubic-bezier(.3,1.5,.5,1) 1.05s backwards}
+/* score tiles */
+.cf-tile{display:flex;align-items:center;gap:18px;width:100%;padding:18px 20px;border-radius:22px;background:#fff;border:1.5px solid var(--line);box-shadow:0 14px 34px -26px rgba(20,27,45,.35);text-align:left;font:inherit;color:var(--ink);cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s}
+.cf-tile:hover{transform:translateY(-2px);box-shadow:0 22px 40px -26px rgba(20,27,45,.5)}
+.cf-tile:hover,.cf-tile.on{border-color:var(--ink)}
+.cf-tile:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@property --cfv{syntax:"<number>";inherits:false;initial-value:0}
+.cf-ring{position:relative;flex:none;width:86px;height:86px;border-radius:50%;display:grid;place-content:center;text-align:center;line-height:1;
+  background:conic-gradient(#B7791F calc(var(--cfv)*1turn),#E3E7EF 0);transition:--cfv 1.4s cubic-bezier(.2,.7,.2,1) .3s}
+.cf-ring:before{content:"";position:absolute;inset:7px;border-radius:50%;background:#fff}
+.cf-ring b,.cf-ring small{position:relative}
+.cf-ring b{font-size:28px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.cf-ring small{margin-top:4px;font-size:11.5px;font-weight:700;color:var(--slate)}
+.cf-tiles.rv:not(.in) .cf-ring{--cfv:0!important}
+.cf-tb{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.cf-tt{display:flex;align-items:center;gap:8px}
+.cf-tt b{font-size:19px;font-weight:800;letter-spacing:-.015em;line-height:1.2}
+.cf-tt em{font-style:normal;padding:3px 9px;border-radius:8px;background:var(--ink);color:#fff;font-size:13px;font-weight:800}
+.cf-td{font-size:13px;line-height:1.4;color:var(--slate)}
+.cf-sks{display:grid;grid-template-columns:repeat(2,max-content);gap:3px 18px;font-size:13.5px;font-weight:600;color:var(--slate)}
+.cf-sks span{display:flex;align-items:center;gap:7px;white-space:nowrap}
+.cf-sks i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c)}
+.cf-sks b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
+.cf-go{margin-top:2px;font-size:13.5px;font-weight:800;color:var(--ink)}
+.cf-priv{display:flex;gap:10px;align-items:flex-start;margin:4px 0 0;font-size:13.5px;line-height:1.45;color:var(--slate)}
+.cf-priv svg{flex:none;width:17px;height:17px;margin-top:1px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+/* results wall: the teacher card opens the certificate */
+.nt-doc{align-self:flex-start;margin-top:auto;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer;transition:background .15s}
+.nt-doc:hover{background:rgba(255,255,255,.16)}.nt-doc:focus-visible{outline:3px solid #F5B700;outline-offset:3px}
+/* hero plate: certificate line links to the certificates */
+.hx-plate a.hx-cred{display:block;margin:1px 0 0;font-size:13px;font-weight:600;color:var(--slate)!important;text-decoration:underline;text-decoration-color:#C3CAD7;text-underline-offset:3px}
+.hx-plate a.hx-cred:hover{text-decoration-color:currentColor}
+/* full-quality viewer */
+html.cf-lock,html.cf-lock body{overflow:hidden}
+.cf-lb{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;background:rgba(10,14,24,.96);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;font-family:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;opacity:0;transition:opacity .22s}
+.cf-lb.in{opacity:1}.cf-lb[hidden]{display:none}
+.cf-lb-bar{display:flex;align-items:center;gap:10px;padding:12px 16px 12px 20px}
+.cf-lb-ttl{flex:1;min-width:0}
+.cf-lb-ttl b,.cf-lb-ttl small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cf-lb-ttl b{font-size:16px;font-weight:800}.cf-lb-ttl small{margin-top:2px;font-size:13px;color:#AEB6C8}
+.cf-lb-hd{flex:none;padding:4px 7px;border-radius:6px;border:1.5px solid #3F475A;color:#6B7487;font-size:11px;font-weight:800;letter-spacing:.06em;transition:color .3s,border-color .3s}
+.cf-lb-hd.on{border-color:#F5B700;color:#F5B700}
+.cf-lb button{flex:none;width:44px;height:44px;display:grid;place-items:center;padding:0;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;cursor:pointer;transition:background .15s}
+.cf-lb button:hover{background:rgba(255,255,255,.14)}.cf-lb button:focus-visible{outline:3px solid #F5B700;outline-offset:2px}
+.cf-lb svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cf-lb.zoom .cf-zv{display:none}
+.cf-lb-view{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;display:flex;align-items:center;justify-content:center;padding:4px 16px}
+.cf-lb-img{display:block;flex:none;width:min(calc(100vw - 32px),calc((100vh - 150px)*.7069));height:auto;border-radius:6px;background:#fff;box-shadow:0 30px 80px -24px #000;cursor:zoom-in;user-select:none;-webkit-user-drag:none}
+@supports (height:100dvh){.cf-lb-img{width:min(calc(100vw - 32px),calc((100dvh - 150px)*.7069))}}
+.cf-lb.zoom .cf-lb-view{display:block;padding:0}
+.cf-lb.zoom .cf-lb-img{width:max(1100px,100%);border-radius:0;box-shadow:none;cursor:zoom-out}
+.cf-lb-foot{display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 16px calc(12px + env(safe-area-inset-bottom))}
+.cf-lb-foot p{margin:0;min-width:0;text-align:center;font-size:12.5px;line-height:1.4;color:#AEB6C8}
+.cf-lb-foot p b{display:block;font-size:14px;color:#fff}
+@media (max-width:860px){.cf-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "stage" "tiles";grid-template-rows:none}.cf-stage{max-width:480px}}
+@media (max-width:520px){
+  .cf-tile{gap:14px;padding:16px}.cf-ring{width:74px;height:74px}.cf-ring b{font-size:24px}.cf-tt b{font-size:17px}
+  .cf-sks{gap:3px 14px;font-size:13px}
+  .cf-tab{left:9px;top:-11px;padding:4px 9px;font-size:11px;gap:5px}
+  .cf-paper{width:57%}.cf-hint{font-size:12.5px}.cf-lb-ttl b,.cf-lb-ttl small{white-space:normal}
+}
+@media (prefers-reduced-motion:reduce){.cf-stamp svg{animation:none}.cf-paper,.cf-tile,.cf-ring{transition:none}}
+.cf-nw{white-space:nowrap}
+/* v28b: verify the Milliy sertifikat on the official site (number is public by the owner's choice) */
+.cf-ver{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-radius:18px;background:#fff;border:1.5px dashed #B8C0CF}
+.cf-ver-ic{flex:none;width:22px;height:22px;margin-top:1px;fill:none;stroke:#1E9A56;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cf-ver-t{flex:1;min-width:0;display:flex;flex-direction:column;gap:7px}
+.cf-ver-t b{font-size:14.5px;font-weight:800;line-height:1.3}
+.cf-ver-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;font-size:13.5px;color:var(--slate)}
+.cf-no{font:inherit;font-size:14px;font-weight:800;letter-spacing:.04em;color:var(--ink);font-variant-numeric:tabular-nums}
+.cf-copy{padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:var(--mist);color:var(--ink);font:inherit;font-size:12.5px;font-weight:700;line-height:1.3;cursor:pointer;transition:border-color .15s}
+.cf-copy:hover{border-color:var(--ink)}
+.cf-copy:focus-visible,.cf-ver-go:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.cf-ver-go{font-weight:800;color:var(--ink)!important;text-decoration:underline;text-decoration-color:#C3CAD7;text-underline-offset:3px}
+.cf-ver-go:hover{text-decoration-color:currentColor}
+.cf-lb-cap a{color:#fff!important;font-weight:700;text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);text-underline-offset:3px}
+.cf-lb-cap a:hover{text-decoration-color:#fff}.cf-lb-cap a:focus-visible{outline:3px solid #F5B700;outline-offset:2px}
 </style>
 </head>
 <body class="uz-on">
@@ -1266,56 +1571,105 @@ body.dark .rs-new{background:#11301E;color:#8be0b2}
  <div class="lp">
   <header class="lp-bar">
     <a class="lp-brand" href="#/" aria-label="EDUNEST"><img class="lg" alt=""><span><b>EDUNEST</b><small class="ml">Multi-Level hamjamiyati</small><small class="g3">General English · Level 3</small></span></a>
-    <nav class="lp-nav" aria-label="Bo‘limlar"><a href="#lp-skills" data-scroll="lp-skills">Imkoniyatlar</a><a class="ml" href="#lp-check" data-scroll="lp-check">Darajani bilish</a><a class="ml" href="#/c1">C1 qo‘llanma</a><a href="#lp-enroll" data-scroll="lp-enroll">Aloqa</a></nav>
+    <nav class="lp-nav" aria-label="Bo‘limlar"><a href="#lp-skills" data-scroll="lp-skills">Imkoniyatlar</a><a class="ml" href="#lp-check" data-scroll="lp-check">Darajani bilish</a><a class="ml" href="#lp-results" data-scroll="lp-results">Natijalar</a><a class="ml" href="#/c1">C1 qo‘llanma</a><a href="#lp-enroll" data-scroll="lp-enroll">Aloqa</a></nav>
     <a class="lp-btn lp-btn-sm" href="#/login">Kirish</a>
   </header>
 
+  <div class="hx-wrap">
   <div class="hx">
     <div class="hx-copy">
       <p class="hx-pill"><i></i><span class="ml">Milliy sertifikat · Multi-Level (CEFR)</span><span class="g3">DOLPHINS · PENGUINS guruhlari</span></p>
-      <h1 class="hx-h1"><span class="ml">Imtihonga ustoz bilan, <em>mashqqa AI bilan</em> tayyorlaning.</span><span class="g3">Darslikdagi har bir mavzu <em>bitta xaritada.</em></span></h1>
-      <p class="hx-lead ml">Mashqlar, ustoz topshiriqlari, AI Writing va AI Speaking tekshiruvi bitta platformada. Har bir xato o‘zbekcha tushuntiriladi, natijangizni ustozingiz ham ko‘radi.</p>
+      <h1 class="hx-h1"><span class="ml">Multi-Level’ga <em>real mock testlar</em> bilan tayyorlaning.</span><span class="g3">Darslikdagi har bir mavzu <em>bitta xaritada.</em></span></h1>
+      <p class="hx-lead ml">15 ta Listening va 6 ta Reading mock test, Writing va Speaking uchun AI tekshiruv. Har bir savolga o‘zbekcha tahlil, natijangizni ustozingiz ham ko‘radi.</p>
       <p class="hx-lead g3">Darslikdagi mashqlar, ustoz topshiriqlari va guruh reytingi bir joyda. Har bir bosqichni bajarib, XP yig‘asiz.</p>
       <div class="lp-actions">
         <a class="lp-btn" href="#/login">Platformaga kirish <span aria-hidden="true">→</span></a>
         <a class="lp-btn lp-btn-line ml" href="#lp-check" data-scroll="lp-check">Darajamni bilish</a>
         <a class="lp-btn lp-btn-line g3" href="#lp-enroll" data-scroll="lp-enroll">Darsga yozilish</a>
       </div>
-      <ul class="hx-trust"><li>Telegram orqali bir bosishda kirish</li><li class="ml">0–75 ball shkalasi</li><li>Natijalar saqlanadi</li></ul>
+      <ul class="hx-trust"><li>Telegram orqali bir bosishda kirish</li><li class="ml">Har testdan keyin natija va sertifikat</li><li class="ml">0–75 ball shkalasi</li><li class="g3">Natijalar saqlanadi</li></ul>
+      
     </div>
     <div class="hx-vis">
-      <div class="hx-photo"><img id="tPhoto" alt="A'zamjon Toxirov"></div>
-      <div class="hx-card hx-res ml" aria-hidden="true">
-        <div class="hx-rh"><span>AI Writing · namuna</span><b class="hx-lv">B2</b></div>
-        <div class="hx-big">52<small>/75</small></div>
-        <div class="hx-bars"><span><i style="--w:80%"></i>Topshiriq</span><span><i style="--w:60%"></i>Grammatika</span><span><i style="--w:70%"></i>Lug‘at</span><span><i style="--w:70%"></i>Bog‘lanish</span></div>
-      </div>
-      <div class="hx-card hx-sp ml" aria-hidden="true">
-        <span class="hx-mic"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
-        <div><b>Speaking · Part 1.1</b><span class="hx-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-      </div>
-      <div class="hx-plate"><b>A'zamjon Toxirov</b><span>C1 o‘qituvchi, EDUNEST Academy</span><a href="https://t.me/teachertx" target="_blank" rel="noopener">@teachertx</a></div>
+      <div class="hx-photo"><img id="tPhoto" src="teacher.jpg" width="1086" height="1448" fetchpriority="high" decoding="async" alt="A'zamjon Toxirov"></div>
+      <div class="hx-plate"><b>A'zamjon Toxirov</b><span class="g3">C1 o‘qituvchi, EDUNEST Academy</span><a href="https://t.me/teachertx" target="_blank" rel="noopener">@teachertx</a></div>
     </div>
+  </div>
   </div>
 
   <div class="hx-band"><div class="lp-in">
-    <div class="ml"><b>4</b><span>ko‘nikma: Listening, Reading, Writing, Speaking</span></div>
-    <div class="ml"><b>~1 daq.</b><span>AI tekshiruvi natijasi</span></div>
+    <div class="ml"><b data-n="15">15</b><span>Listening mock test: audio, natija va sertifikat</span></div>
+    <div class="ml"><b data-n="6">6</b><span>Reading mock test: har bir savolga tahlil</span></div>
+    <div class="ml"><b data-n="120">120</b><span>Writing namuna javob (C1)</span></div>
+    <div class="ml"><b data-n="60">60</b><span>Speaking iborasi, misollar bilan</span></div>
     <div class="g3"><b>XP</b><span>har bir bosqich uchun</span></div>
     <div class="g3"><b>2</b><span>guruh: DOLPHINS va PENGUINS</span></div>
-    <div><b>UZ</b><span>barcha izohlar o‘zbek tilida</span></div>
-    <div><b>C1</b><span>ustoz har bir natijani ko‘radi</span></div>
+    <div class="g3"><b>UZ</b><span>barcha izohlar o‘zbek tilida</span></div>
+    <div class="g3"><b>C1</b><span>ustoz har bir natijani ko‘radi</span></div>
   </div></div>
 
   <section class="lp-sec" id="lp-skills">
     <div class="lp-in">
       <p class="hx-kick">Platformada nima bor</p>
       <h2 class="lp-h2 ml">To‘rt ko‘nikma, bitta tizim</h2><h2 class="lp-h2 g3">Darsdan keyin ham dars davom etadi</h2>
-      <div class="sk-grid ml">
-        <div class="sk"><span class="sk-n">01</span><h3>Listening</h3><p>Part 2 Pack: 9 ta mashq, skript va javoblar bilan. Audio, transcript va so‘zlar bilan ishlash usuli.</p></div>
-        <div class="sk"><span class="sk-n">02</span><h3>Reading</h3><p>Part 1 Booster: 30 ta matn, har birida 5 xil mashq. To‘liq mock test real imtihon formatida.</p></div>
-        <div class="sk sk-ai"><span class="sk-n">03</span><em>AI</em><h3>Writing</h3><p>Task 1.1, 1.2 va Part 2. AI 5 mezon bo‘yicha baholaydi, xatolarni belgilaydi va o‘zbekcha tushuntiradi.</p></div>
-        <div class="sk sk-ai"><span class="sk-n">04</span><em>AI</em><h3>Speaking</h3><p>Imtihondagidek 4 qism: savol o‘qiladi, tayyorgarlik vaqti, yozib olish. Transkript, talaffuz va namunaviy javoblar.</p></div>
+      <div class="stk ml" id="lpStack">
+        <article class="stk-c sk-l" style="--i:0">
+          <div class="stk-t"><span class="stk-n">01 / 05</span>
+            <div class="stk-hd"><span class="sk-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></span><h3>Listening</h3></div>
+            <p class="stk-big"><b>15</b> ta to‘liq mock test, real imtihondagi audio bilan</p>
+            <ul class="stk-ul"><li>6 qism, 35 savol, xuddi imtihondagidek</li><li>Oxirida natija, sertifikat va xatolar tahlili</li><li>9 ta alohida Part 2 mashqi</li></ul>
+            <a class="stk-go" href="#/login">Listening’ni boshlash <span aria-hidden="true">→</span></a></div>
+          <div class="stk-win"><div class="stk-bar" aria-hidden="true"><i></i><i></i><i></i><span>Listening · Mock Test 1</span></div><img class="stk-img" src="shots/listening.webp" width="1290" height="807" loading="lazy" decoding="async" alt="Listening mock test oynasi: audio pleyer, taymer va savollar" onerror="this.parentNode.classList.add('nf')">
+            <div aria-hidden="true" class="stk-ui"><div class="pv-row"><span class="pv-pill">Part 2</span><span class="pv-pill pv-dark">⏱ 28:14</span></div>
+              <div class="pv-audio"><span class="pv-play"></span><span class="pv-track"><span style="width:38%"></span></span></div>
+              <div class="pv-q"><b>9</b><span class="pv-ln" style="width:72%"></span></div>
+              <div class="pv-opts"><span>A</span><span class="on">B</span><span>C</span></div>
+              <div class="pv-q"><b>10</b><span class="pv-ln" style="width:58%"></span></div>
+              <div class="pv-opts"><span>A</span><span>B</span><span>C</span></div></div></div>
+        </article>
+        <article class="stk-c sk-r" style="--i:1">
+          <div class="stk-t"><span class="stk-n">02 / 05</span>
+            <div class="stk-hd"><span class="sk-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg></span><h3>Reading</h3></div>
+            <p class="stk-big"><b>6</b> ta 60 daqiqalik mock test va qism bo‘yicha mashqlar</p>
+            <ul class="stk-ul"><li>Har bir savolga o‘zbekcha tahlil va tarjima</li><li>30 ta Part 1 Booster matni, har birida 5 xil mashq</li><li>Part 3 sarlavhalar: 12 ta matn</li></ul>
+            <a class="stk-go" href="#/login">Reading’ni boshlash <span aria-hidden="true">→</span></a></div>
+          <div class="stk-win"><div class="stk-bar" aria-hidden="true"><i></i><i></i><i></i><span>Reading · Mock test</span></div><img class="stk-img" src="shots/reading.webp" width="1650" height="1032" loading="lazy" decoding="async" alt="Reading mock test oynasi: chapda matn, o‘ngda savollar" onerror="this.parentNode.classList.add('nf')">
+            <div aria-hidden="true" class="stk-ui pv-split"><div class="pv-text"><span style="width:92%"></span><span style="width:100%"></span><span style="width:84%"></span><span class="pv-mark" style="width:62%"></span><span style="width:96%"></span><span style="width:70%"></span></div>
+              <div class="pv-side"><div class="pv-q"><b>14</b><span class="pv-ln" style="width:60%"></span></div><div class="pv-gap">________</div>
+                <div class="pv-note"><b>UZ tahlil</b><span class="pv-ln" style="width:90%"></span><span class="pv-ln" style="width:66%"></span></div></div></div></div>
+        </article>
+        <article class="stk-c sk-w" style="--i:2">
+          <div class="stk-t"><span class="stk-n">03 / 05</span>
+            <div class="stk-hd"><span class="sk-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></svg></span><h3>Writing <em class="stk-ai">AI</em></h3></div>
+            <p class="stk-big"><b>120</b> ta C1 namuna va AI tekshiruv</p>
+            <ul class="stk-ul"><li>Task 1.1, 1.2 va Part 2</li><li>AI 5 mezon bo‘yicha baholaydi</li><li>Xatolarni belgilab, o‘zbekcha tushuntiradi</li></ul>
+            <a class="stk-go" href="#/login">Writing’ni boshlash <span aria-hidden="true">→</span></a></div>
+          <div class="stk-win"><div class="stk-bar" aria-hidden="true"><i></i><i></i><i></i><span>AI Writing yordamchi</span></div><img class="stk-img" src="shots/writing.webp" width="1290" height="807" loading="lazy" decoding="async" alt="AI Writing yordamchi oynasi: topshiriq turini tanlash" onerror="this.parentNode.classList.add('nf')">
+            <div aria-hidden="true" class="stk-ui"><div class="pv-text"><span style="width:96%"></span><span style="width:88%"></span><span class="pv-err" style="width:46%"></span><span style="width:90%"></span></div>
+              <div class="pv-fix">✓ <b>has been</b> &nbsp;·&nbsp; zamon xatosi</div>
+              <div class="pv-crit"><span><i style="width:80%"></i></span><span><i style="width:64%"></i></span><span><i style="width:72%"></i></span><span><i style="width:56%"></i></span><span><i style="width:68%"></i></span></div></div></div>
+        </article>
+        <article class="stk-c sk-s" style="--i:3">
+          <div class="stk-t"><span class="stk-n">04 / 05</span>
+            <div class="stk-hd"><span class="sk-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><h3>Speaking <em class="stk-ai">AI</em></h3></div>
+            <p class="stk-big">Imtihondagidek <b>4</b> qism, AI baho va maslahat bilan</p>
+            <ul class="stk-ul"><li>Savol o‘qiladi, tayyorgarlik vaqti, yozib olish</li><li>AI transkript, baho va maslahat beradi</li><li>60 ta foydali ibora: tarjima va misollar</li></ul>
+            <a class="stk-go" href="#/login">Speaking’ni boshlash <span aria-hidden="true">→</span></a></div>
+          <div class="stk-win"><div class="stk-bar" aria-hidden="true"><i></i><i></i><i></i><span>AI Speaking yordamchi</span></div><img class="stk-img" src="shots/speaking.webp" width="1290" height="807" loading="lazy" decoding="async" alt="AI Speaking yordamchi oynasi: imtihon qismlari" onerror="this.parentNode.classList.add('nf')">
+            <div aria-hidden="true" class="stk-ui pv-c"><span class="pv-pill">Tayyorgarlik · 0:05</span><span class="pv-mic"></span>
+              <span class="pv-wave"><i style="height:30%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:50%"></i><i style="height:75%"></i><i style="height:40%"></i><i style="height:85%"></i><i style="height:55%"></i><i style="height:35%"></i><i style="height:65%"></i></span></div></div>
+        </article>
+        <article class="stk-c sk-x" style="--i:4">
+          <div class="stk-t"><span class="stk-n">05 / 05</span>
+            <div class="stk-hd"><span class="sk-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m9 14-1.5 7L12 19l4.5 2L15 14"/></svg></span><h3>Natija va sertifikat</h3></div>
+            <p class="stk-big">Har testdan keyin <b>0–75</b> ball shkalasida natija</p>
+            <ul class="stk-ul"><li>Har bir mock testdan keyin sertifikat</li><li>Qaysi savolda xato qilganingiz va nega</li><li>Natijangizni ustozingiz ham ko‘radi</li></ul>
+            <a class="stk-go" href="#/login">Platformaga kirish <span aria-hidden="true">→</span></a></div>
+          <div class="stk-win"><div class="stk-bar" aria-hidden="true"><i></i><i></i><i></i><span>Natija · namuna</span></div><img class="stk-img" src="shots/result.webp" width="1290" height="900" loading="lazy" decoding="async" alt="Test natijasi oynasi: to‘g‘ri javoblar, ball va daraja" onerror="this.parentNode.classList.add('nf')">
+            <div aria-hidden="true" class="stk-ui"><div class="pv-score"><b>58</b><span>/ 75</span><em>B2</em></div>
+              <div class="pv-ok"><span>✓</span><span>✓</span><span class="x">✗</span><span>✓</span><span>✓</span><span>✓</span><span class="x">✗</span><span>✓</span></div>
+              <div class="pv-cert">Sertifikat <b>↓</b></div></div></div>
+        </article>
       </div>
       <div class="sk-grid g3">
         <div class="sk"><span class="sk-n">01</span><h3>Darslik mashqlari</h3><p>Har bir unit bo‘yicha grammatika va so‘z mashqlari, darhol tekshiriladi.</p></div>
@@ -1348,7 +1702,7 @@ body.dark .rs-new{background:#11301E;color:#8be0b2}
       <ol class="lp-steps">
         <li><b>Kiring</b><p>Telegram orqali bir bosishda yoki markazdagi ID raqamingiz va parolingiz bilan. Yangi kelganlar ustoz aytgan mehmon kodi bilan kiradi.</p></li>
         <li><b>Xarita bo‘yicha yuring</b><p>Har bir topshiriq bosqichma-bosqich ochiladi. XP yig‘asiz va guruh reytingida ko‘rinasiz.</p></li>
-        <li><b>Fikr oling</b><p><span class="ml">AI Writing va Speaking xatolaringizni o‘zbekcha tushuntiradi. </span>Ustozingiz har bir natijangizni ko‘rib boradi.</p></li>
+        <li><b>Natijani biling</b><p><span class="ml">Har bir mock testdan keyin ball, sertifikat va har bir savol tahlili. AI Writing va Speaking xatolaringizni o‘zbekcha tushuntiradi. </span>Ustozingiz har bir natijangizni ko‘rib boradi.</p></li>
       </ol>
     </div>
   </section>
@@ -1444,7 +1798,7 @@ body.dark .rs-new{background:#11301E;color:#8be0b2}
 
 <script>
 /* =================== SETTINGS =================== */
-const CLOUD_URL = "https://script.google.com/macros/s/AKfycbyGlQel0xAg62m-yMubZRfQgFrz-p8B7AMnxp4JsN9fv8eUJzek_zg6GM17BIo9ZkHNrw/exec";
+const CLOUD_URL = "https://tuffyskazbkbezsghgtk.supabase.co/functions/v1/api";
 const BOOSTER_URL = "https://toxirovteacher.github.io/edunest-multilevel/booster.html";
 const G3 = true;
 const GROUPS = G3?["DOLPHINS","PENGUINS"]:["SHARKS","FARMERS","GUEST"];
@@ -1496,9 +1850,65 @@ async function cpost(body){const r=await fetch(CLOUD_URL,{method:'POST',body:JSO
 function setTheme(d){document.body.classList.toggle('dark',d);document.querySelectorAll('#themeToggle,#themeToggle2,#themeToggle3').forEach(b=>b.textContent=d?'☀️':'🌙');store(ST+'dark',d?'1':'0')}
 setTheme(store(ST+'dark')==='1'||(store(ST+'dark')==null&&matchMedia('(prefers-color-scheme: dark)').matches));
 document.querySelectorAll('#themeToggle,#themeToggle2,#themeToggle3').forEach(b=>b.onclick=()=>setTheme(!document.body.classList.contains('dark')));
-document.querySelectorAll('img.lg').forEach(i=>i.src=LOGO);document.querySelectorAll('#tPhoto,img.tph').forEach(i=>i.src=PHOTO);
+document.querySelectorAll('img.lg').forEach(i=>i.src=LOGO);document.querySelectorAll('img.tph').forEach(i=>i.src=PHOTO);
+/* hero uses the full-resolution teacher.jpg; if that file is missing, fall back to the small built-in copy */
+{const t=document.getElementById('tPhoto');if(t){const fb=()=>{if(t.src!==PHOTO)t.src=PHOTO};t.addEventListener('error',fb);if(t.complete&&!t.naturalWidth)fb()}}
 $('#c1share').onclick=async()=>{const url=location.href.split('#')[0]+'#/c1';const d={title:'Listening 5.0 dan 7.5–8.0 ga: A\'zamjon Toxirovning usuli',text:'1.5 oyda Listening’ni 7.5–8.0 ga chiqargan 10 qadam',url};try{if(navigator.share){await navigator.share(d);return}await navigator.clipboard.writeText(url);toast('Havola nusxalandi')}catch(e){}};
 document.querySelectorAll('[data-scroll]').forEach(a=>a.onclick=e=>{e.preventDefault();document.getElementById(a.dataset.scroll).scrollIntoView({behavior:'smooth'})});
+/* results wall: Multi-Level / IELTS tabs (click, or left/right arrow keys) */
+{const T=[...document.querySelectorAll('.nt-tab')];const sel=t=>T.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on});
+  T.forEach((t,i)=>{t.onclick=()=>sel(t);t.onkeydown=e=>{const d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d)return;e.preventDefault();const n=T[(i+d+T.length)%T.length];sel(n);n.focus()}})}
+/* teacher certificates (Multi-Level page): papers on a desk, a magnifier on hover, and a full-quality viewer */
+{const S=document.getElementById('cfStage'),P=S?[...S.querySelectorAll('.cf-paper')]:[];
+if(P.length){const T=[...document.querySelectorAll('.cf-tile')];
+  const front=i=>{S.dataset.front=i;T.forEach(t=>t.classList.toggle('on',+t.dataset.doc===i))};
+  [...P,...T].forEach(b=>{const i=+b.dataset.doc;b.addEventListener('pointerenter',()=>front(i));b.addEventListener('focus',()=>front(i))});
+  if(matchMedia('(hover:hover) and (pointer:fine)').matches)P.forEach(p=>{const L=p.querySelector('.cf-lens'),Z=2.5;let bg=0;
+    p.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;
+      if(!bg){bg=1;const s=p.querySelector('img');L.style.backgroundImage=`url("${p.dataset.full}"),url("${s.currentSrc||s.src}")`}
+      const x=e.offsetX,y=e.offsetY;L.style.backgroundSize=`${p.offsetWidth*Z}px ${p.offsetHeight*Z}px`;
+      L.style.backgroundPosition=`${75-x*Z}px ${75-y*Z}px`;L.style.translate=`${x}px ${y}px`;p.classList.add('lz')});
+    p.addEventListener('pointerleave',()=>p.classList.remove('lz'))});
+  const ic=d=>`<svg viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;
+  const lb=document.createElement('div');lb.className='cf-lb';lb.hidden=true;lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-labelledby','cfLbT');
+  lb.innerHTML=`<div class="cf-lb-bar"><div class="cf-lb-ttl"><b id="cfLbT"></b><small></small></div><span class="cf-lb-hd" title="To‘liq sifatdagi nusxa">HD</span>`+
+    `<button type="button" data-a="z" aria-label="Kattalashtirish" aria-pressed="false">${ic('<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11h6"/><path class="cf-zv" d="M11 8v6"/>')}</button>`+
+    `<button type="button" data-a="x" aria-label="Yopish">${ic('<path d="M6 6l12 12M18 6 6 18"/>')}</button></div>`+
+    `<div class="cf-lb-view"><img class="cf-lb-img" width="960" height="1358" alt="" draggable="false"></div>`+
+    `<div class="cf-lb-foot"><button type="button" data-a="p" aria-label="Oldingi hujjat">${ic('<path d="m15 6-6 6 6 6"/>')}</button>`+
+    `<p><b class="cf-lb-n"></b><span class="cf-lb-cap"></span></p>`+
+    `<button type="button" data-a="n" aria-label="Keyingi hujjat">${ic('<path d="m9 6 6 6-6 6"/>')}</button></div>`;
+  document.body.appendChild(lb);
+  const q=s=>lb.querySelector(s),img=q('.cf-lb-img'),view=q('.cf-lb-view'),hd=q('.cf-lb-hd'),zb=q('[data-a="z"]');let cur=0,back=null,tok=0,off=[],drag=null,moved=0,sx=null;
+  const zoom=(z,fx,fy)=>{lb.classList.toggle('zoom',z);zb.setAttribute('aria-pressed',z);zb.setAttribute('aria-label',z?'Kichraytirish':'Kattalashtirish');
+    if(z){view.scrollLeft=fx*img.offsetWidth-view.clientWidth/2;view.scrollTop=fy*img.offsetHeight-view.clientHeight/2}else view.scrollTop=view.scrollLeft=0};
+  const show=i=>{cur=(i+P.length)%P.length;const p=P[cur],s=p.querySelector('img'),t=++tok;zoom(false);
+    img.src=s.currentSrc||s.src;img.alt=p.dataset.alt;q('#cfLbT').textContent=p.dataset.title;q('.cf-lb-ttl small').textContent=p.dataset.sub;
+    q('.cf-lb-n').textContent=(cur+1)+' / '+P.length;hd.classList.remove('on');
+    const cap=q('.cf-lb-cap');cap.textContent='';if(p.dataset.no){const a=document.createElement('a');a.href=p.dataset.verify;a.target='_blank';a.rel='noopener';a.dataset.copy=p.dataset.no;
+      a.textContent='sertifikat.uzbmb.uz saytida tekshirish ↗';cap.append('Raqam '+p.dataset.no+' · ',a)}else cap.textContent='Shaxsiy raqamlar yashirilgan · rasmni bosib kattalashtiring';
+    const f=new Image();f.src=p.dataset.full;f.decode().then(()=>{if(t===tok){img.src=f.src;hd.classList.add('on')}}).catch(()=>{});front(cur)};
+  const open=i=>{back=document.activeElement;show(i);lb.hidden=false;off=[...document.body.children].filter(c=>c!==lb&&!c.inert);off.forEach(c=>c.inert=true);
+    document.documentElement.classList.add('cf-lock');requestAnimationFrame(()=>lb.classList.add('in'));q('[data-a="x"]').focus()};
+  const close=()=>{lb.classList.remove('in');lb.hidden=true;off.forEach(c=>c.inert=false);off=[];document.documentElement.classList.remove('cf-lock');if(back&&back.focus)back.focus()};
+  document.querySelectorAll('[data-doc]').forEach(b=>b.addEventListener('click',()=>open(+b.dataset.doc)));
+  /* certificate number: the copy button copies it, and the verify link copies it too, ready to paste on the official site */
+  document.addEventListener('click',e=>{const c=e.target.closest('[data-copy]');if(!c)return;const n=c.dataset.copy,b=c.classList.contains('cf-copy')?c:null;
+    const ok=()=>{if(b){b.textContent='Nusxalandi ✓';clearTimeout(b._t);b._t=setTimeout(()=>b.textContent='Nusxa olish',2000)}},
+      no=()=>{const k=b&&b.parentNode.querySelector('.cf-no');if(k){const r=document.createRange();r.selectNodeContents(k);const s=getSelection();s.removeAllRanges();s.addRange(r)}};
+    try{navigator.clipboard.writeText(n).then(ok,no)}catch(_){no()}});
+  lb.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(a){const k=a.dataset.a;if(k==='x')close();else if(k==='z')zoom(!lb.classList.contains('zoom'),.5,0);else show(cur+(k==='n'?1:-1))}
+    else if(e.target===view)close()});
+  img.addEventListener('click',e=>{if(moved){moved=0;return}const r=img.getBoundingClientRect();zoom(!lb.classList.contains('zoom'),(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height)});
+  view.addEventListener('pointerdown',e=>{moved=0;if(e.pointerType==='mouse'&&lb.classList.contains('zoom'))drag={x:e.clientX,y:e.clientY,l:view.scrollLeft,t:view.scrollTop}});
+  addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>4)moved=1;view.scrollLeft=drag.l-dx;view.scrollTop=drag.t-dy});
+  addEventListener('pointerup',()=>{drag=null});
+  view.addEventListener('touchstart',e=>{sx=lb.classList.contains('zoom')||e.touches.length>1?null:[e.touches[0].clientX,e.touches[0].clientY]},{passive:true});
+  view.addEventListener('touchend',e=>{if(!sx)return;const t=e.changedTouches[0],dx=t.clientX-sx[0],dy=t.clientY-sx[1];sx=null;if(Math.abs(dx)>50&&Math.abs(dx)>1.5*Math.abs(dy))show(cur+(dx<0?1:-1))},{passive:true});
+  document.addEventListener('keydown',e=>{if(lb.hidden)return;
+    if(e.key==='Escape'){e.preventDefault();close()}else if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();show(cur+(e.key==='ArrowRight'?1:-1))}
+    else if(e.key==='Tab'){const f=[...lb.querySelectorAll('button')],a=f[0],z=f[f.length-1],o=document.activeElement;
+      if(!lb.contains(o)){e.preventDefault();a.focus()}else if(e.shiftKey&&o===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&o===z){e.preventDefault();a.focus()}}})}}
 
 /* ---------- modal ---------- */
 function modal(html,btns){closeModals();const bg=document.createElement('div');bg.className='modal-bg';
@@ -1664,8 +2074,21 @@ function showLanding(){document.title=G3?'EDUNEST · General English 3':'EDUNEST
 function showC1(){document.body.classList.remove('st-mode');['#app','#login','#landing'].forEach(x=>$(x).classList.add('hide'));$('#themeFloat').classList.add('hide');$('#c1page').classList.remove('hide');scrollTo(0,0);
   document.title='C1 Listening yo‘li · A\'zamjon Toxirov · EDUNEST'}
 function renderShow(){const box=$('#lpShow');if(!box||box.dataset.done)return;box.dataset.done=1;
-  const items=G3?[['u4a','4A · Have you finished yet?','Uy ishlari, make / do, present perfect'],['u4b','4B · How we shop','Xarid so‘zlari, present perfect yoki past simple'],['rc34','Revise & Check 3&4','Grammatika va so‘zlar bo‘yicha takrorlash']]:[['booster','Reading Part 1 Booster','30 ta matn, har birida 5 xil mashq'],['reading','Reading Full Mock Test','5 qism, real imtihon formatida'],['listening','Listening Part 2 Pack','9 ta mashq, skript va javoblar bilan']];
-  box.innerHTML=items.map(([k,t,d],i)=>`<div class="lp-sc">${coverHTML(k,i,'<span class="tbadge">🔒 O‘quvchilar uchun</span>')}<div class="lp-scb"><b>${t}</b><small>${d}</small></div></div>`).join('')}
+  const items=G3?[['u4a','4A · Have you finished yet?','Uy ishlari, make / do, present perfect'],['u4b','4B · How we shop','Xarid so‘zlari, present perfect yoki past simple'],['rc34','Revise & Check 3&4','Grammatika va so‘zlar bo‘yicha takrorlash']]:[['lmock','Listening Mock Tests','15 ta to‘liq test: audio, natija va sertifikat'],['reading','Reading Mock Tests','6 ta to‘liq test, har bir savolga tahlil'],['booster','Reading Part 1 Booster','30 ta matn, har birida 5 xil mashq'],
+    ['rp3','Reading Part 3 · Sarlavhalar','12 ta matn, tahlil va tarjima bilan'],['wr2','Writing namunalari','30 ta Part 1 savol va 60 ta Part 2 mavzu, C1 javoblar'],['vocab','Speaking iboralari','60 ta ibora: tarjima, misol va mashqlar']];
+  box.innerHTML=items.map(([k,t,d],i)=>`<div class="lp-sc">${coverHTML(k,i,'<span class="tbadge">🔒 O‘quvchilar uchun</span>')}<div class="lp-scb"><b>${t}</b><small>${d}</small></div></div>`).join('');lpFx()}
+/* landing motion: sections rise in as they scroll into view; band numbers count up once. Content stays visible without JS. */
+function lpFx(){const L=$('#landing');if(!L||L.dataset.fx||!('IntersectionObserver' in window))return;L.dataset.fx=1;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const els=L.querySelectorAll('.lp-sec .lp-in>*,.lp-sc,.sk,.hx-band .lp-in>div');els.forEach(e=>e.classList.add('rv'));
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const e=en.target;io.unobserve(e);e.classList.add('in');
+    const n=e.querySelector&&e.querySelector('b[data-n]');if(n){const to=+n.dataset.n,t0=performance.now();const f=t=>{const k=Math.min(1,(t-t0)/1100);n.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)}}),{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(e=>io.observe(e));stkFx()}
+/* stacking cards: the card underneath shrinks a little as the next one slides over it (the pile itself is CSS sticky) */
+function stkFx(){const S=$('#lpStack');if(!S||G3||S.dataset.fx)return;S.dataset.fx=1;const C=[...S.children];let q=0;
+  const f=()=>{q=0;for(let i=0;i<C.length-1;i++){const a=C[i].getBoundingClientRect(),b=C[i+1].getBoundingClientRect();
+    C[i].style.setProperty('--k',Math.max(0,Math.min(1,1-(b.top-a.top)/(C[i].offsetHeight||1))).toFixed(3))}};
+  addEventListener('scroll',()=>{if(!q&&!$('#landing').classList.contains('hide')){q=1;requestAnimationFrame(f)}},{passive:true});f()}
 /* ================= ROUTER ================= */
 function go(h,replace){if(location.hash===h){route();return}if(replace){history.replaceState(null,'',h);route()}else location.hash=h}
 addEventListener('hashchange',route);
@@ -1738,6 +2161,7 @@ const COVERS={
   booster:{k:'Reading · Part 1',w:'BOOSTER',c1:'#141B2D',c2:'#E3101F',art:'book',l:'Booster'},
   reading:{k:'Reading',w:'MOCK TEST',c1:'#0A2E3A',c2:'#178A8E',art:'lines',l:'Reading'},
   listening:{k:'Listening',w:'PART 2',c1:'#221640',c2:'#7B3FE4',art:'wave',l:'Listening'},
+  lmock:{k:'Listening',w:'MOCK TEST',c1:'#1B1036',c2:'#E3101F',art:'wave',l:'Listening'},
   vocab:{k:'Vocabulary',w:'SO‘ZLAR',c1:'#3D2A00',c2:'#D99A00',art:'dots',l:'Lug‘at'},
   writing:{k:'Writing',w:'ESSAY',c1:'#0E3322',c2:'#1E9A56',art:'lines',l:'Writing'},
   speaking:{k:'Speaking',w:'GAPIR',c1:'#3A0E22',c2:'#D8336A',art:'wave',l:'Speaking'},
@@ -1751,7 +2175,7 @@ const COVERS={
   wr2:{k:'Writing · Part 2',w:'ESSAYS',c1:'#16351C',c2:'#58B83A',art:'book',l:'Writing 2'},
   ai:{k:'Writing',w:'AI CHECK',c1:'#1F1147',c2:'#6C4DF6',art:'dots',l:'AI'}};
 /* ---------- ready-made materials (files in this site) ---------- */
-const LIB=[{"key":"rm1","title":"Reading · Full Mock Test 1","note":"35 savol · 60 daqiqa · bitta o‘tirishda, oxirida natija va sertifikat","cover":"reading","xp":75,"sec":"mock","steps":[{"t":"Reading Mock Test 1","l":"mashq.html#d=rm1&x=all"}]},{"key":"rp3","title":"Reading Part 3 · Sarlavhalar","note":"12 ta matn: sarlavha tanlash, tahlil va tarjima bilan","cover":"rp3","xp":15,"sec":"reading","steps":[{"t":"1. The End of Cash? (B1–B2)","l":"mashq.html#d=rp3&x=e1"},{"t":"2. The Second Life of Things (B1–B2)","l":"mashq.html#d=rp3&x=e2"},{"t":"3. The Future of Small Local Shops (B1–B2)","l":"mashq.html#d=rp3&x=e3"},{"t":"4. The Truth About Loyalty Cards (B1–B2)","l":"mashq.html#d=rp3&x=e4"},{"t":"5. Starting a Business from Your Bedroom (B1–B2)","l":"mashq.html#d=rp3&x=e5"},{"t":"6. The Changing World of Shopping (B1–B2)","l":"mashq.html#d=rp3&x=e6"},{"t":"7. The Hidden Science of Prices (B2–C1)","l":"mashq.html#d=rp3&x=e7"},{"t":"8. Living on Subscription (B2–C1)","l":"mashq.html#d=rp3&x=e8"},{"t":"9. The Changing World of Shopping (B2–C1)","l":"mashq.html#d=rp3&x=e9"},{"t":"10. Green Spaces (B2–C1)","l":"mashq.html#d=rp3&x=e10"},{"t":"11. Slow Travel: When Less Can Mean More","l":"mashq.html#d=rp3&x=e11"},{"t":"12. Beyond the Classroom: What School Really Teaches Us","l":"mashq.html#d=rp3&x=e12"}]},{"key":"rp2b1","title":"Reading Part 2 · B1 Pack 1","note":"7 ta mashq: 5 kishi va 8 ta matn, izohlar bilan","cover":"rp2","xp":10,"sec":"reading","steps":[{"t":"1. Department Stores","l":"mashq.html#d=rp2b1&x=e1"},{"t":"2. Art Courses","l":"mashq.html#d=rp2b1&x=e2"},{"t":"3. Film Studios","l":"mashq.html#d=rp2b1&x=e3"},{"t":"4. Reviews of Animated Films","l":"mashq.html#d=rp2b1&x=e4"},{"t":"5. Geography Websites","l":"mashq.html#d=rp2b1&x=e5"},{"t":"6. Beaches","l":"mashq.html#d=rp2b1&x=e6"},{"t":"7. Museums","l":"mashq.html#d=rp2b1&x=e7"}]},{"key":"voc1","title":"Lug‘at · Speaking iboralari","note":"60 ta ibora: tarjima, misollar, Speaking javoblari va 2 ta mashq","cover":"vocab","xp":10,"sec":"vocab","steps":[{"t":"Free Time: Collocations","l":"mashq.html#d=voc1&x=ft1"},{"t":"Free Time: Phrasal verbs","l":"mashq.html#d=voc1&x=ft2"},{"t":"Free Time: Mashq","l":"mashq.html#d=voc1&x=ftx"},{"t":"Character: Adjectives va Idioms","l":"mashq.html#d=voc1&x=cp1"},{"t":"Character: Collocations","l":"mashq.html#d=voc1&x=cp2"},{"t":"Work and Study: Collocations","l":"mashq.html#d=voc1&x=ws1"},{"t":"Work and Study: Phrasal verbs","l":"mashq.html#d=voc1&x=ws2"},{"t":"Work and Study: Mashq","l":"mashq.html#d=voc1&x=wsx"}]},{"key":"wr1","title":"Writing Part 1 · 30 savol","note":"Har bir savolga 1.1 va 1.2 namuna javob (60 ta)","cover":"wr1","xp":5,"sec":"writing","steps":[{"t":"1. School Dormitory Rules","l":"mashq.html#d=wr1&x=q1"},{"t":"2. Earlier Study Room Closing","l":"mashq.html#d=wr1&x=q2"},{"t":"3. Cinema Screening and Ticket Changes","l":"mashq.html#d=wr1&x=q3"},{"t":"4. Museum Exhibition Space","l":"mashq.html#d=wr1&x=q4"},{"t":"5. Library Books and Computer Room","l":"mashq.html#d=wr1&x=q5"},{"t":"6. School Canteen Menu","l":"mashq.html#d=wr1&x=q6"},{"t":"7. Sports Club Booking Policy","l":"mashq.html#d=wr1&x=q7"},{"t":"8. Public Park Facilities","l":"mashq.html#d=wr1&x=q8"},{"t":"9. Language School Class Timetable","l":"mashq.html#d=wr1&x=q9"},{"t":"10. University Shuttle Service","l":"mashq.html#d=wr1&x=q10"},{"t":"11. Community Centre Weekend Activities","l":"mashq.html#d=wr1&x=q11"},{"t":"12. School Playground Redesign","l":"mashq.html#d=wr1&x=q12"},{"t":"13. Swimming Pool Timetable","l":"mashq.html#d=wr1&x=q13"},{"t":"14. Bookshop Reading Events","l":"mashq.html#d=wr1&x=q14"},{"t":"15. College Career Centre","l":"mashq.html#d=wr1&x=q15"},{"t":"16. Museum History Exhibition","l":"mashq.html#d=wr1&x=q16"},{"t":"17. School Mountain Trip","l":"mashq.html#d=wr1&x=q17"},{"t":"18. Cinema Film Festival","l":"mashq.html#d=wr1&x=q18"},{"t":"19. University Career Day","l":"mashq.html#d=wr1&x=q19"},{"t":"20. Community Sports Tournament","l":"mashq.html#d=wr1&x=q20"},{"t":"21. Library Author Workshop","l":"mashq.html#d=wr1&x=q21"},{"t":"22. Outdoor Music Evening","l":"mashq.html#d=wr1&x=q22"},{"t":"23. School Science Fair","l":"mashq.html#d=wr1&x=q23"},{"t":"24. Hotel Guest Experience","l":"mashq.html#d=wr1&x=q24"},{"t":"25. Restaurant Service Review","l":"mashq.html#d=wr1&x=q25"},{"t":"26. School Library Experience","l":"mashq.html#d=wr1&x=q26"},{"t":"27. Fitness Centre Facilities","l":"mashq.html#d=wr1&x=q27"},{"t":"28. Online Learning Platform","l":"mashq.html#d=wr1&x=q28"},{"t":"29. Local Bus Service","l":"mashq.html#d=wr1&x=q29"},{"t":"30. School Sports Day","l":"mashq.html#d=wr1&x=q30"}]},{"key":"wr2","title":"Writing Part 2 · 60 mavzu","note":"15 yo‘nalish, har bir savolga C1 namuna (180–200 so‘z)","cover":"wr2","xp":10,"sec":"writing","steps":[{"t":"1. Education","l":"mashq.html#d=wr2&x=t1"},{"t":"2. Technology","l":"mashq.html#d=wr2&x=t2"},{"t":"3. Environment","l":"mashq.html#d=wr2&x=t3"},{"t":"4. Transport & Cities","l":"mashq.html#d=wr2&x=t4"},{"t":"5. Health & Lifestyle","l":"mashq.html#d=wr2&x=t5"},{"t":"6. Society & Youth","l":"mashq.html#d=wr2&x=t6"},{"t":"7. Culture & Traditions","l":"mashq.html#d=wr2&x=t7"},{"t":"8. Business & Work","l":"mashq.html#d=wr2&x=t8"},{"t":"9. Global Issues","l":"mashq.html#d=wr2&x=t9"},{"t":"10. Art & Media","l":"mashq.html#d=wr2&x=t10"},{"t":"11. Family & Community","l":"mashq.html#d=wr2&x=t11"},{"t":"12. Animals & Nature","l":"mashq.html#d=wr2&x=t12"},{"t":"13. Tourism & Travel","l":"mashq.html#d=wr2&x=t13"},{"t":"14. Food & Consumption","l":"mashq.html#d=wr2&x=t14"},{"t":"15. Work & Future","l":"mashq.html#d=wr2&x=t15"}]},{"key":"soon-ai","soon":true,"title":"Writing · AI tekshiruv","note":"1.1, 1.2 va 2-topshiriqlarni yozasiz, AI tekshirib, xatolarni tushuntiradi","cover":"ai","xp":1,"steps":[{"t":"Tez kunda","l":"soon"}]}];
+const LIB=[{"key":"rm1","title":"Reading · Full Mock Test 1","note":"35 savol · 60 daqiqa · bitta o‘tirishda, oxirida natija va sertifikat","cover":"reading","xp":75,"sec":"mock","steps":[{"t":"Reading Mock Test 1","l":"mashq.html#d=rm1&x=all"}]},{"key":"rm12","title":"Reading · Full Mock Test 12","note":"35 savol · 60 daqiqa · har bir savolga o‘zbekcha tahlil va to‘liq tarjima","cover":"reading","xp":75,"sec":"mock","steps":[{"t":"Reading Mock Test 12","l":"mashq.html#d=rm12&x=all"}]},{"key":"rn1","title":"Reading · Notion Mock Test 1","note":"35 savol · 5 qism · 60 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"reading","xp":75,"sec":"mock","steps":[{"t":"Reading Notion Mock 1","l":"mashq.html#d=rn1&x=all"}]},{"key":"rn2","title":"Reading · Notion Mock Test 2","note":"35 savol · 5 qism · 60 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"reading","xp":75,"sec":"mock","steps":[{"t":"Reading Notion Mock 2","l":"mashq.html#d=rn2&x=all"}]},{"key":"rn3","title":"Reading · Notion Mock Test 3","note":"35 savol · 5 qism · 60 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"reading","xp":75,"sec":"mock","steps":[{"t":"Reading Notion Mock 3","l":"mashq.html#d=rn3&x=all"}]},{"key":"rn4","title":"Reading · Notion Mock Test 4","note":"35 savol · 5 qism · 60 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"reading","xp":75,"sec":"mock","steps":[{"t":"Reading Notion Mock 4","l":"mashq.html#d=rn4&x=all"}]},{"key":"lm01","title":"Listening · Mock Test 1","note":"35 savol · 6 qism · audio 45 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 1","l":"mashq.html#d=lm01&x=all"}]},{"key":"lm02","title":"Listening · Mock Test 2","note":"35 savol · 6 qism · audio 46 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 2","l":"mashq.html#d=lm02&x=all"}]},{"key":"lm03","title":"Listening · Mock Test 3","note":"35 savol · 6 qism · audio 43 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 3","l":"mashq.html#d=lm03&x=all"}]},{"key":"lm04","title":"Listening · Mock Test 4","note":"35 savol · 6 qism · audio 46 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 4","l":"mashq.html#d=lm04&x=all"}]},{"key":"lm05","title":"Listening · Mock Test 5","note":"35 savol · 6 qism · audio 43 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 5","l":"mashq.html#d=lm05&x=all"}]},{"key":"lm06","title":"Listening · Mock Test 6","note":"35 savol · 6 qism · audio 43 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 6","l":"mashq.html#d=lm06&x=all"}]},{"key":"lm07","title":"Listening · Mock Test 7","note":"35 savol · 6 qism · audio 43 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 7","l":"mashq.html#d=lm07&x=all"}]},{"key":"lm08","title":"Listening · Mock Test 8","note":"35 savol · 6 qism · audio 45 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 8","l":"mashq.html#d=lm08&x=all"}]},{"key":"lm09","title":"Listening · Mock Test 9","note":"35 savol · 6 qism · audio 44 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 9","l":"mashq.html#d=lm09&x=all"}]},{"key":"lm10","title":"Listening · Mock Test 10","note":"35 savol · 6 qism · audio 44 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mock Test 10","l":"mashq.html#d=lm10&x=all"}]},{"key":"nm1","title":"Listening · Notion Mock 1","note":"35 savol · 6 qism · audio 46 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Notion Mock 1","l":"mashq.html#d=nm1&x=all"}]},{"key":"nm2","title":"Listening · Notion Mock 2","note":"35 savol · 6 qism · audio 46 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Notion Mock 2","l":"mashq.html#d=nm2&x=all"}]},{"key":"nm3","title":"Listening · Notion Mock 3","note":"35 savol · 6 qism · audio 46 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Notion Mock 3","l":"mashq.html#d=nm3&x=all"}]},{"key":"nm4","title":"Listening · Notion Mock 4","note":"35 savol · 6 qism · audio 44 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Notion Mock 4","l":"mashq.html#d=nm4&x=all"}]},{"key":"ml1","title":"Listening · Mood Mock Test 1","note":"35 savol · 6 qism · audio 36 daqiqa · bitta o‘tirishda, natija va sertifikat","cover":"lmock","xp":75,"sec":"mock","steps":[{"t":"Listening Mood Mock Test 1","l":"mashq.html#d=ml1&x=all"}]},{"key":"rp3","title":"Reading Part 3 · Sarlavhalar","note":"12 ta matn: sarlavha tanlash, tahlil va tarjima bilan","cover":"rp3","xp":15,"sec":"reading","steps":[{"t":"1. The End of Cash? (B1–B2)","l":"mashq.html#d=rp3&x=e1"},{"t":"2. The Second Life of Things (B1–B2)","l":"mashq.html#d=rp3&x=e2"},{"t":"3. The Future of Small Local Shops (B1–B2)","l":"mashq.html#d=rp3&x=e3"},{"t":"4. The Truth About Loyalty Cards (B1–B2)","l":"mashq.html#d=rp3&x=e4"},{"t":"5. Starting a Business from Your Bedroom (B1–B2)","l":"mashq.html#d=rp3&x=e5"},{"t":"6. The Changing World of Shopping (B1–B2)","l":"mashq.html#d=rp3&x=e6"},{"t":"7. The Hidden Science of Prices (B2–C1)","l":"mashq.html#d=rp3&x=e7"},{"t":"8. Living on Subscription (B2–C1)","l":"mashq.html#d=rp3&x=e8"},{"t":"9. The Changing World of Shopping (B2–C1)","l":"mashq.html#d=rp3&x=e9"},{"t":"10. Green Spaces (B2–C1)","l":"mashq.html#d=rp3&x=e10"},{"t":"11. Slow Travel: When Less Can Mean More","l":"mashq.html#d=rp3&x=e11"},{"t":"12. Beyond the Classroom: What School Really Teaches Us","l":"mashq.html#d=rp3&x=e12"}]},{"key":"rp2b1","title":"Reading Part 2 · B1 Pack 1","note":"7 ta mashq: 5 kishi va 8 ta matn, izohlar bilan","cover":"rp2","xp":10,"sec":"reading","steps":[{"t":"1. Department Stores","l":"mashq.html#d=rp2b1&x=e1"},{"t":"2. Art Courses","l":"mashq.html#d=rp2b1&x=e2"},{"t":"3. Film Studios","l":"mashq.html#d=rp2b1&x=e3"},{"t":"4. Reviews of Animated Films","l":"mashq.html#d=rp2b1&x=e4"},{"t":"5. Geography Websites","l":"mashq.html#d=rp2b1&x=e5"},{"t":"6. Beaches","l":"mashq.html#d=rp2b1&x=e6"},{"t":"7. Museums","l":"mashq.html#d=rp2b1&x=e7"}]},{"key":"voc1","title":"Lug‘at · Speaking iboralari","note":"60 ta ibora: tarjima, misollar, Speaking javoblari va 2 ta mashq","cover":"vocab","xp":10,"sec":"vocab","steps":[{"t":"Free Time: Collocations","l":"mashq.html#d=voc1&x=ft1"},{"t":"Free Time: Phrasal verbs","l":"mashq.html#d=voc1&x=ft2"},{"t":"Free Time: Mashq","l":"mashq.html#d=voc1&x=ftx"},{"t":"Character: Adjectives va Idioms","l":"mashq.html#d=voc1&x=cp1"},{"t":"Character: Collocations","l":"mashq.html#d=voc1&x=cp2"},{"t":"Work and Study: Collocations","l":"mashq.html#d=voc1&x=ws1"},{"t":"Work and Study: Phrasal verbs","l":"mashq.html#d=voc1&x=ws2"},{"t":"Work and Study: Mashq","l":"mashq.html#d=voc1&x=wsx"}]},{"key":"wr1","title":"Writing Part 1 · 30 savol","note":"Har bir savolga 1.1 va 1.2 namuna javob (60 ta)","cover":"wr1","xp":5,"sec":"writing","steps":[{"t":"1. School Dormitory Rules","l":"mashq.html#d=wr1&x=q1"},{"t":"2. Earlier Study Room Closing","l":"mashq.html#d=wr1&x=q2"},{"t":"3. Cinema Screening and Ticket Changes","l":"mashq.html#d=wr1&x=q3"},{"t":"4. Museum Exhibition Space","l":"mashq.html#d=wr1&x=q4"},{"t":"5. Library Books and Computer Room","l":"mashq.html#d=wr1&x=q5"},{"t":"6. School Canteen Menu","l":"mashq.html#d=wr1&x=q6"},{"t":"7. Sports Club Booking Policy","l":"mashq.html#d=wr1&x=q7"},{"t":"8. Public Park Facilities","l":"mashq.html#d=wr1&x=q8"},{"t":"9. Language School Class Timetable","l":"mashq.html#d=wr1&x=q9"},{"t":"10. University Shuttle Service","l":"mashq.html#d=wr1&x=q10"},{"t":"11. Community Centre Weekend Activities","l":"mashq.html#d=wr1&x=q11"},{"t":"12. School Playground Redesign","l":"mashq.html#d=wr1&x=q12"},{"t":"13. Swimming Pool Timetable","l":"mashq.html#d=wr1&x=q13"},{"t":"14. Bookshop Reading Events","l":"mashq.html#d=wr1&x=q14"},{"t":"15. College Career Centre","l":"mashq.html#d=wr1&x=q15"},{"t":"16. Museum History Exhibition","l":"mashq.html#d=wr1&x=q16"},{"t":"17. School Mountain Trip","l":"mashq.html#d=wr1&x=q17"},{"t":"18. Cinema Film Festival","l":"mashq.html#d=wr1&x=q18"},{"t":"19. University Career Day","l":"mashq.html#d=wr1&x=q19"},{"t":"20. Community Sports Tournament","l":"mashq.html#d=wr1&x=q20"},{"t":"21. Library Author Workshop","l":"mashq.html#d=wr1&x=q21"},{"t":"22. Outdoor Music Evening","l":"mashq.html#d=wr1&x=q22"},{"t":"23. School Science Fair","l":"mashq.html#d=wr1&x=q23"},{"t":"24. Hotel Guest Experience","l":"mashq.html#d=wr1&x=q24"},{"t":"25. Restaurant Service Review","l":"mashq.html#d=wr1&x=q25"},{"t":"26. School Library Experience","l":"mashq.html#d=wr1&x=q26"},{"t":"27. Fitness Centre Facilities","l":"mashq.html#d=wr1&x=q27"},{"t":"28. Online Learning Platform","l":"mashq.html#d=wr1&x=q28"},{"t":"29. Local Bus Service","l":"mashq.html#d=wr1&x=q29"},{"t":"30. School Sports Day","l":"mashq.html#d=wr1&x=q30"}]},{"key":"wr2","title":"Writing Part 2 · 60 mavzu","note":"15 yo‘nalish, har bir savolga C1 namuna (180–200 so‘z)","cover":"wr2","xp":10,"sec":"writing","steps":[{"t":"1. Education","l":"mashq.html#d=wr2&x=t1"},{"t":"2. Technology","l":"mashq.html#d=wr2&x=t2"},{"t":"3. Environment","l":"mashq.html#d=wr2&x=t3"},{"t":"4. Transport & Cities","l":"mashq.html#d=wr2&x=t4"},{"t":"5. Health & Lifestyle","l":"mashq.html#d=wr2&x=t5"},{"t":"6. Society & Youth","l":"mashq.html#d=wr2&x=t6"},{"t":"7. Culture & Traditions","l":"mashq.html#d=wr2&x=t7"},{"t":"8. Business & Work","l":"mashq.html#d=wr2&x=t8"},{"t":"9. Global Issues","l":"mashq.html#d=wr2&x=t9"},{"t":"10. Art & Media","l":"mashq.html#d=wr2&x=t10"},{"t":"11. Family & Community","l":"mashq.html#d=wr2&x=t11"},{"t":"12. Animals & Nature","l":"mashq.html#d=wr2&x=t12"},{"t":"13. Tourism & Travel","l":"mashq.html#d=wr2&x=t13"},{"t":"14. Food & Consumption","l":"mashq.html#d=wr2&x=t14"},{"t":"15. Work & Future","l":"mashq.html#d=wr2&x=t15"}]},{"key":"soon-ai","soon":true,"title":"Writing · AI tekshiruv","note":"1.1, 1.2 va 2-topshiriqlarni yozasiz, AI tekshirib, xatolarni tushuntiradi","cover":"ai","xp":1,"steps":[{"t":"Tez kunda","l":"soon"}]}];
 const isSoon=a=>!!(a&&a.steps&&a.steps.length===1&&a.steps[0].l==='soon');
 const isExam=l=>/^mashq\.html#(?:.*&)?x=all(?:&|$)/.test(l||'');
 const examDoc=l=>{const m=/^mashq\.html#(?:.*&)?d=([a-z0-9-]+)/.exec(l||'');return m?m[1]:''};
